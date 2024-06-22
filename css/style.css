@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Libre+Baskerville&family=Work+Sans");
+/*
+syntax analysis : font family = {Intern, Lato , Libre Baskerville, Work Sans}
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing : border-box;
+    /*box-sizing -> box-sizing property in CSS is used to alter the default CSS box model used to calculate widths and heights of elements.
+    content-box (default)-> if The element with class content-box has a total width of 200px for its content.
+Adding 20px padding and 10px border on each side results in a total width of 260px (200 + 20 + 10).
+
+border-box -> The element with class border-box has a total width of 200px, including its content, padding, and border.
+Therefore, the content area will be adjusted to fit within the 200px total width, making it 140px wide (200 - 20 - 10).
+    */
+    font-family: "work Sans" , sans-serif; 
+    /* font-family: "font-family name" , generic font-family ;*/
+}
+
+/*The display: flex property in CSS is used to create a flexible box layout, which allows you to design complex layouts more easily and efficiently. When applied to a container element, it enables the children of the container to be arranged in a flexible manner.*/
+
+body{
+    min-height: 100vh; /*Remove bottom Whitespace and fit background on vertical browser too, Give Space betweein Body element (ex - Heading Text) and Top*/
+    display: flex; /*what use*/
+    justify-content: center; /*no use*/
+    align-items: center; /*no use*/
+    align-self: center;  /*no use*/
+    background-image: url("https://wallpapercave.com/wp/wp2757834.gif"); /*Copy Image Address, not link address url in chrome*/
+    background-repeat: no-repeat; 
+    /*by default -> auto , repeat*/
+    background-size: cover; /*no use*/
+    /*Background-size : auto -> default, cover -> cover the webpage, 100% -> fit , repeat-x, repeat-y
+
+}
+
+.container{
+    padding: 30px; /*no use*/
+
+}
+
+h2{
+    color:white;
+    text-align: center;
+    font-size: 50px; /*changed*/
+    letter-spacing: -0.2px; /*no use*/
+    font-family: "Marrieweather" , "serif"; 
+}
+
+p{
+    max-width:670px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom:50px;
+    color: white;
+}
+
+.textarea{
+    width: 100%; /*width full*/
+    height: 316px;
+    padding:18px; /* Increase hight of textarea*/
+    resize: none; /*Can't change textarea size on runtime*/
+    background-color: rgba(229, 229, 225, 0.881);
+    box-shadow: 0px 15px 50px 1px rgb(199, 94, 94); /*Very Useful*
+    /*Shadow -> Horizontal Offset (0), Vertical Offset (12px), Blur Radius (48px), Spread Radius (0px) */
+   
+    border: 0.3px rgb(60, 76, 165); /*no use*/
+    border-radius: 16px; /*works*/
+}
+
+.textarea:focus{
+    border: 0.3 solid rgb(43, 56, 0.3); /*n ouse*/
+    outline: none; /*the outline shown on click on text area is removed*/
+}
+
+p, .textarea{
+font-size: 18px;
+letter-spacing: 1px; /*work*/
+word-spacing: 2px; /*work*/
+line-height: 1.6; /*led to gap bw lines*/
+}
+
+button{
+background-color: rgb(8, 134, 65);
+color:white;
+border-radius: 6px;
+padding: 16px 32px;
+border:none; /*remove border*/
+font-size: 18px;
+letter-spacing: 0.5px;
+margin:auto; /*no use*/
+margin-top: -80px;
+display:flex;
+position:relative; /*prevent button to hid behind text area*/
+cursor: pointer; /*Change cursor: arrow to hand on hover*/
+}
+/*button:focus and button:hover are pseudo-classes that apply element when it is in a specifici state
+either when it is focused or when it is hovered over by the mouse.*/
+button:focus, button:hover{ 
+    background-color: rgb(16, 181, 90); /*work*/
+    box-shadow: 0 5px 30px 0 rgb(0,0,0,0.2); /*work*/
+}
+/*Display:flex -> create a flexible box layout, which allows you to design complex layouts more easily and efficiently. When applied to a container element, it enables the children of the container to be arranged in a flexible manner. */
+.counter-container{
+    display: flex; /*bring back to same line*/
+    margin-top: 0px ; /*30px*/
+    justify-content: space-between;
+}
